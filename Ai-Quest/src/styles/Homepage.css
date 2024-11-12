@@ -1,19 +1,86 @@
-.homepage {
+/* Reset styling for a full-screen experience */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    width: 100%;
+    height: 100%;
     font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 20px;
+    background: linear-gradient(135deg, #2e3a48, #1c2833); /* Subtle gradient */
+    color: #ffffff;
   }
   
+  .homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  /* Header styling */
   .header h1 {
-    color: #ff6347; /* Tomato color */
+    font-size: 3rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
   }
   
-  .features ul {
-    list-style-type: none;
+  .header p {
+    font-size: 1.2rem;
+    color: #b0bec5; /* Lighter text color */
+    margin-bottom: 3rem;
   }
   
-  .features li {
-    font-size: 1.2em;
-    margin: 10px 0;
+  /* Chat input section centered and spanning a good width */
+  .chat-interface {
+    display: flex;
+    align-items: center;
+    width: 90%; /* Responsive width */
+    max-width: 800px; /* Maximum width for large screens */
+    margin: 0 auto;
+  }
+  
+  .chat-input {
+    flex: 1;
+    padding: 18px 24px;
+    background-color: #1f2a35; /* Dark background for input */
+    border: 1px solid #455a64;
+    color: #e0f7fa;
+    border-radius: 8px 0 0 8px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .chat-input::placeholder {
+    color: #b0bec5;
+  }
+  
+  .chat-input:focus {
+    border-color: #64b5f6; /* Light blue border on focus */
+  }
+  
+  .send-button {
+    padding: 18px 36px;
+    background-color: #64b5f6;
+    color: #ffffff;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+  }
+  
+  .send-button:hover {
+    background-color: #42a5f5;
+  }
+  
+  .send-button:active {
+    transform: scale(0.98); /* Slight button press effect */
   }
   
