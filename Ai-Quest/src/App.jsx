@@ -1,13 +1,13 @@
-import React from 'react'
-import './App.css'
-import Homepage from './components/Homepage'
+import React from 'react';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';  // Use Routes instead of Switch
+import LoginPage from './components/auth/LoginPage';
 
 function App() {
- return(
-  <div className="App">
-    <Homepage />
-    </div>
- )
+  return (
+    <>
+    <LoginPage />
+    </>
+  );
 }
 
-export default App
+export default App;

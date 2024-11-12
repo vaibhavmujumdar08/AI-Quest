@@ -1,86 +1,126 @@
-/* Reset styling for a full-screen experience */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
+/* src/styles/Homepage.css */
+
+.homepage {
+    padding: 2rem;
     width: 100%;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #2e3a48, #1c2833); /* Subtle gradient */
-    color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
   }
   
-  .homepage {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    width: 100%;
-  }
-  
-  /* Header styling */
   .header h1 {
-    font-size: 3rem;
-    color: #ffffff;
+    font-size: 2.5rem;
+    color: #64b5f6;
     margin-bottom: 0.5rem;
-    font-weight: 600;
   }
   
   .header p {
     font-size: 1.2rem;
-    color: #b0bec5; /* Lighter text color */
+    color: #b0bec5;
     margin-bottom: 3rem;
   }
   
-  /* Chat input section centered and spanning a good width */
-  .chat-interface {
+  /* Question input section */
+  .question-input {
     display: flex;
-    align-items: center;
-    width: 90%; /* Responsive width */
-    max-width: 800px; /* Maximum width for large screens */
-    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
   }
   
-  .chat-input {
+  .input-field {
     flex: 1;
-    padding: 18px 24px;
-    background-color: #1f2a35; /* Dark background for input */
-    border: 1px solid #455a64;
-    color: #e0f7fa;
+    padding: 14px 20px;
+    border: 1px solid #37474f;
     border-radius: 8px 0 0 8px;
-    font-size: 1.1rem;
+    background-color: #263238;
+    color: #e0f7fa;
+    font-size: 1rem;
     outline: none;
-    transition: border-color 0.2s;
   }
   
-  .chat-input::placeholder {
+  .input-field::placeholder {
     color: #b0bec5;
   }
   
-  .chat-input:focus {
-    border-color: #64b5f6; /* Light blue border on focus */
+  .input-field:focus {
+    border-color: #64b5f6;
   }
   
-  .send-button {
-    padding: 18px 36px;
+  .ask-button {
+    padding: 14px 30px;
     background-color: #64b5f6;
-    color: #ffffff;
-    font-size: 1.1rem;
     border: none;
+    color: #ffffff;
+    font-size: 1rem;
     border-radius: 0 8px 8px 0;
     cursor: pointer;
-    transition: background-color 0.2s, transform 0.1s;
+    transition: background-color 0.2s;
   }
   
-  .send-button:hover {
+  .ask-button:hover {
     background-color: #42a5f5;
   }
   
-  .send-button:active {
-    transform: scale(0.98); /* Slight button press effect */
+  /* Trending questions section */
+  .trending-questions {
+    margin-bottom: 3rem;
+  }
+  
+  .trending-questions h2 {
+    color: #64b5f6;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .trending-questions ul {
+    list-style-type: none;
+  }
+  
+  .trending-questions li {
+    padding: 12px 0;
+    border-bottom: 1px solid #37474f;
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+  
+  .trending-questions li:hover {
+    color: #64b5f6;
+  }
+  
+  /* Categories section */
+  .categories h2 {
+    color: #64b5f6;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .categories-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .category-item {
+    background-color: #1f2a35;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .category-item:hover {
+    background-color: #64b5f6;
+    color: #1f2a35;
+  }
+  /* Homepage.css */
+
+.homepage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background: linear-gradient(135deg, #2e3a48, #1c2833); /* Match background if needed */
   }
   
